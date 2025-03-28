@@ -59,7 +59,7 @@ namespace Lista_della_spesa
                 return;
             }
             // qua l'elemento è valido quindi
-            using (StreamWriter wr = new StreamWriter("lista.csv"))
+            using (StreamWriter wr = new StreamWriter("lista.csv", true))  // Aggiungi 'true' per fare append
             {
                 wr.WriteLine($"{txt_NomeProdotto.Text};{(int.Parse(txt_CostoProdotto.Text))};{(int.Parse(txt_QuantitaProdotto.Text))}");
             }
